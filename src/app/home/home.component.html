@@ -1,0 +1,18 @@
+<mat-form-field>
+    <mat-label>Select Program</mat-label>
+    <mat-select multiple  (selectionChange)="onChange($event)">
+      <mat-option *ngFor="let programs of program " [value]="programs" >
+        {{programs.programName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-label>Select Project </mat-label>
+    <mat-select multiple >
+      <mat-option *ngFor="let project of availableProject; let i=index" [value]="project">
+        {{project.projectName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
